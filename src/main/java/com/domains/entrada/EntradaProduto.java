@@ -1,5 +1,6 @@
-package com.domains;
+package com.domains.entrada;
 
+import com.domains.produto.Produto;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -9,7 +10,7 @@ public class EntradaProduto {
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne //anotação de cardinalidade
     @JoinColumn(nullable = false)
     private Produto produto;
 
